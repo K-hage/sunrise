@@ -20,26 +20,26 @@ class UserAdmin(UserAdmin):
     list_display_links = ('username',)
     fieldsets = (
         (None,
-         {"fields": (
-             "username",
-             "password"
+         {'fields': (
+             'username',
+             'password'
          )}),
-        ("Персональная информация",
-         {"fields": (
-             "first_name",
-             "last_name",
-             "email",
+        ('Персональная информация',
+         {'fields': (
+             'first_name',
+             'last_name',
+             'email',
          )}),
-        ("Права доступа",
-         {"fields": (
-             "is_active",
-             "is_staff",
-             "is_superuser",
+        ('Права доступа',
+         {'fields': (
+             'is_active',
+             'is_staff',
+             'is_superuser',
          )}),
-        ("Важные даты",
-         {"fields": (
-             "last_login",
-             "date_joined"
+        ('Важные даты',
+         {'fields': (
+             'last_login',
+             'date_joined'
          )}),
     )
 
