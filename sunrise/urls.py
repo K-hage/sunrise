@@ -1,3 +1,4 @@
+import djoser.urls
 from django.contrib import admin
 from django.urls import (
     include,
@@ -11,8 +12,10 @@ from drf_spectacular.views import (
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('auth/', include('djoser.urls')),
+    path('api/', include('djoser.urls')),
     path('auth/', include('djoser.urls.jwt')),
+
+    path('api/', include('corp.urls')),
 
     # swagger
     path('schema/', SpectacularAPIView.as_view(), name='schema'),

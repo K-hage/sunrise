@@ -16,6 +16,13 @@ class User(AbstractUser):
         max_length=150,
     )
 
+    company = models.ForeignKey(
+        'corp.Company',
+        on_delete=models.CASCADE,
+        related_name='employees',
+        null=True
+    )
+
     REQUIRED_FIELDS = [
         'email',
         'first_name',
